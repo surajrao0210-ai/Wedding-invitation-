@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital@0;1&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-grey: #333;
+            --off-white: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-grey);
+            line-height: 1.6;
+        }
+
+        /* Hero Header */
+        header {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 10vw, 5rem);
+            color: var(--gold);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* Countdown */
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .count-item {
+            background: white;
+            padding: 15px;
+            min-width: 70px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .count-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .count-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Details Section */
+        .container {
+            max-width: 900px;
+            margin: -60px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 60px 40px;
+            border: 1px solid #eee;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .date-gold {
+            font-size: 2rem;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0;
+        }
+
+        .venue-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 50px;
+            background-color: var(--gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b08d4a;
+            transform: translateY(-3px);
+        }
+
+        /* Registry Section */
+        .registry {
+            padding: 60px 20px;
+            background: #fdfcf9;
+            text-align: center;
+        }
+
+        .registry-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .registry-item {
+            font-weight: bold;
+            color: #777;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .registry-item:hover {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        footer {
+            padding: 60px 20px;
+            color: #aaa;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 40px 20px; }
+            #countdown { gap: 8px; }
+            .count-item { min-width: 50px; padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Alex & Taylor</h1>
+        <p class="subtitle">Are Getting Married</p>
+
+        <div id="countdown">
+            <div class="count-item">
+                <span class="count-number" id="days">00</span>
+                <span class="count-label">Days</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number" id="hours">00</span>
+                <span class="count-label">Hrs</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number" id="mins">00</span>
+                <span class="count-label">Min</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number" id="secs">00</span>
+                <span class="count-label">Sec</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <p>We invite you to join us in celebrating our wedding day!</p>
+            
+            <div class="date-gold">Saturday, June 14, 2026</div>
+            
+            <p><strong>Ceremony at 4:00 PM</strong></p>
+            
+            <p>
+                The Grand Garden Pavilion<br>
+                123 Celebration Lane<br>
+                San Francisco, CA 94105
+            </p>
+
+            <p><a href="https://goo.gl/maps/example" class="venue-link" target="_blank">View on Google Maps</a></p>
+
+            <p><em>Reception to follow</em></p>
+
+            <a href="mailto:rsvp@wedding.com?subject=RSVP - Wedding" class="btn">RSVP VIA EMAIL</a>
+        </div>
+    </div>
+
+    <section class="registry">
+        <h3>Gift Registry</h3>
+        <p>Your presence is the greatest gift. Should you wish to contribute elsewhere:</p>
+        <div class="registry-grid">
+            <a href="#" class="registry-item">AMAZON</a>
+            <a href="#" class="registry-item">TARGET</a>
+            <a href="#" class="registry-item">ZOLA</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with love &mdash; 2026</p>
+    </footer>
+
+    <script>
+        // EDIT YOUR WEDDING DATE HERE
+        const weddingDate = new Date("June 14, 2026 16:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("mins").innerHTML = minutes;
+            document.getElementById("secs").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<h3>The Celebration has Begun!</h3>";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
